@@ -77,22 +77,21 @@ makeHobbits();
 
  // Part 3
 
- function keepItSecretKeepItSafe() {
+ function keepItSecretKeepItSafe() {  //this is the beginning of function
                  
  // create a div with an id of 'the-ring'
 // give the div a class of 'magic-imbued-jewelry'
  // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
-  //theRing.addEventListener("click", "nazgul-screech");
   // add the ring as a child of Frodo  
 
-  var theRing = document.createElement("div");
-    theRing.setAttribute("id", "the-ring");
-    theRing.setAttribute("class", "magic-imbued-jewelry");
-   theRing.addEventListener("click", nazgulScreech) ;
+  var theRing = document.createElement("div"); // created a var theRing and using document allows me to create a "div" element in the html 
+    theRing.setAttribute("id", "the-ring"); //with my theRing variable I give an id of "the-right" to the div
+    theRing.setAttribute("class", "magic-imbued-jewelry");//gave the div a class of "magi-imbued-jewelry" which is a border already set in CSS. creating the div links to hte css where ht border is already defined
+   theRing.addEventListener("click", nazgulScreech); //nazgul screech already exists in html - I grabbbed it from HTML using addEventListener and specifid that when it is clicked it's to play hte screech
    //access hobbit list to get to Frodo
-var frodo = document.getElementById("frodo");
+var frodo = document.getElementById("frodo");//created var frodo and grabbed it from the HTML (document) with getElementId which is "Frodo"
 
-   frodo.appendChild(theRing);
+   frodo.appendChild(theRing); //appendChild(theRing)<--have to use the var I named, and add to end of appendChild to add the Ring to Frodo
   
   
 
@@ -165,6 +164,14 @@ function forgeTheFellowShip() {
   // create a new div called 'the-fellowship' within rivendell
   // add each hobbit and buddy one at a time to 'the-fellowship'
   // after each character is added make an alert that they have joined your party
+  var fellowship = document.createElement("div"); //created a div element insdie the html document
+    fellowship.setAttribute("id", "the-fellowship"); //gave the div an id of the-fellowship
+  var rivendell = document.getElementById("middle-earth").children[1]; //accessed middle earth on the document and it's 1'st child which is rivendell
+  rivendell.appendChild(fellowship);//appended fellowship to rivendell
+  for (var i = hobbits.length - 1; i >= 0; i--) {
+    hobbits[i]
+  }
+
 }
 
 
